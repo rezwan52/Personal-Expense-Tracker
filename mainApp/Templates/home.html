@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+
+
+
+{% comment %} <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add Expense</button> {% endcomment %}
+
+
+
+{% comment %} <h1> Daily Expense Tracker </h1> {% endcomment %}
+
+
+
+
+<!-- Modal toggle -->
+
+  
+
+
+
+
+
+   
+
+{% comment %} </div>
+ <h1>Expense List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for expense in expenses %}
+            <tr>
+                <td>{{ expense.amount }}</td>
+                <td>{{ expense.category }}</td>
+                <td>{{ expense.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> {% endcomment %}
+
+    
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full mx-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800"> Expense Lists
+            <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400"></p>
+        </caption>
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="col" class="px-6 py-3">
+                    Category
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="col" class="px-6 py-3">
+                    Amount
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="col" class="px-6 py-3">
+                    Description
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" scope="col" class="px-6 py-3">
+                    Date
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Edit</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for expense in expenses %}
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                
+                <td class="px-6 py-4">{{ expense.category }}</td>
+                <td class="px-6 py-4">{{ expense.amount }}</td>
+                <td class="px-6 py-4">{{ expense.description }}</td>
+                <td class="px-6 py-4">{{ expense.date }}</td>
+            </td>
+            <td class="px-6 py-4 text-right">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-600 hover:underline">Edit</a>
+            </td>
+            </td>
+            <td class="px-6 py-4 text-right">
+                <a href="#" class="font-medium text-blue-600 dark:text-red-500 hover:underline">Delete</a>
+            </td>
+            </tr>
+            {% endfor %}
+
+
+
+
+            {% comment %} <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Silver
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+                <td class="px-6 py-4">
+                    $2999
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    $1999
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                    Black
+                </td>
+                <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
+                    $99
+                </td>
+                <td class="px-6 py-4 text-right">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> {% endcomment %}
+
+
+{% endblock %}
